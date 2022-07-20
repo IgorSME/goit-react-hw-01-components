@@ -9,7 +9,7 @@ export function Statistics({ title, stats }) {
         {stats.map(stat => <StatisticsItem key={stat.id}
           label={stat.label}
       percentage = {stat.percentage}/>).reduce((acc, i) => {
-        if (!acc.find(el => el.props.label == i.props.label)) {
+        if (!acc.find(el => el.props.label === i.props.label)) {
     acc.push(i);
   }
   return acc;
